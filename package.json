@@ -12,7 +12,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/frodare/addon-redux.git"
+    "url": "https://github.com/DreamworldSolutions/addon-redux.git"
   },
   "license": "MIT",
   "main": "dist/cjs/index.js",
@@ -64,6 +64,7 @@
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.4",
     "rimraf": "^3.0.2",
+    "semantic-release": "17.0.8",
     "ts-standard": "^10.0.0",
     "typescript": "^4.2.4",
     "zx": "^1.14.1"
@@ -94,7 +95,7 @@
     "supportedFrameworks": [
       "react"
     ],
-    "icon": "https://raw.githubusercontent.com/frodare/addon-redux/master/docs/addon-redux.png"
+    "icon": "https://raw.githubusercontent.com/DreamworldSolutions/addon-redux/master/docs/addon-redux.png"
   },
   "dependencies": {
     "jsondiffpatch": "^0.4.1",
@@ -105,9 +106,9 @@
       "+([0-9])?(.{+([0-9]),x}).x",
       "master",
       {
-          "name": "feature/*",
-          "prerelease": "${name.replace(/^feature\\//g, \"\")}",
-          "channel": "${name.replace(/^feature\\//g, \"\")}"
+        "name": "feature/*",
+        "prerelease": "${name.replace(/^feature\\//g, \"\")}",
+        "channel": "${name.replace(/^feature\\//g, \"\")}"
       }
     ]
   }
