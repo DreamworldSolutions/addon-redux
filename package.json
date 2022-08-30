@@ -1,6 +1,6 @@
 {
-  "name": "addon-redux",
-  "version": "2.0.11",
+  "name": "@dreamworld/addon-redux",
+  "version": "0.0.0-development",
   "description": "Storybook addon for Redux Components",
   "author": "Charles Howard",
   "keywords": [
@@ -51,7 +51,7 @@
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@types/jest": "^26.0.24",
-    "@types/jsoneditor": "^6.3.0",
+    "@types/jsoneditor": "^9.5.1",
     "auto": "^10.3.0",
     "babel-loader": "^8.1.0",
     "boxen": "^5.0.1",
@@ -99,5 +99,16 @@
   "dependencies": {
     "jsondiffpatch": "^0.4.1",
     "jsoneditor": "^9.5.0"
+  },
+  "release": {
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "master",
+      {
+          "name": "feature/*",
+          "prerelease": "${name.replace(/^feature\\//g, \"\")}",
+          "channel": "${name.replace(/^feature\\//g, \"\")}"
+      }
+    ]
   }
 }
