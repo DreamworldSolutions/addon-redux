@@ -12,6 +12,7 @@ jobs:
           command: |
             export NPM_TOKEN=${SNAPSHOT_NPM_TOKEN}
             npm config set ${NPM_PACKAGE_SCOPE}:registry ${NPM_SNAPSHOT_REPO}
+            yarn build
             npx semantic-release
   release:
     docker:
@@ -19,6 +20,7 @@ jobs:
     steps:
       - checkout
       - run: yarn install --frozen-lockfile --non-ineractive
+      - run: yarn build
       - run: echo "Running release job"
       - run:
           name: Deploy
