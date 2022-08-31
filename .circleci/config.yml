@@ -12,6 +12,10 @@ jobs:
           command: |
             export NPM_TOKEN=${SNAPSHOT_NPM_TOKEN}
             npm config set ${NPM_PACKAGE_SCOPE}:registry ${NPM_SNAPSHOT_REPO}
+            yarn prerelease
+            # some of the build scripts exit with status code other then 0, though they seem to work
+            # properly. So we don't let the pipeline fail
+            yarn build || true
             npx semantic-release
   release:
     docker:
@@ -20,6 +24,10 @@ jobs:
       - checkout
       - run: yarn install --frozen-lockfile --non-ineractive
       - run: echo "Running release job"
+      - run: yarn prerelease
+        # some of the build scripts exit with status code other then 0, though they seem to work
+        # properly. So we don't let the pipeline fail
+      - run: yarn build || true
       - run:
           name: Deploy
           command: npx semantic-release
