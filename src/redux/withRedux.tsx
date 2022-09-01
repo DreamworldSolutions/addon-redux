@@ -1,7 +1,6 @@
 import React from 'react'
 import { StoryFn as StoryFunction, DecoratorFunction, useChannel } from '@storybook/addons'
 import { STORY_CHANGED } from '@storybook/core-events'
-import { Provider } from 'react-redux'
 import { AnyAction } from 'redux'
 import { diff as differ } from 'jsondiffpatch'
 
@@ -46,6 +45,6 @@ export default (): DecoratorFunction => {
 
     store.__WITH_REDUX_ENABLED__?.listenToStateChange(onDispatchListener)
 
-    return (<Provider store={store}> {story()} </Provider>)
+    return story();
   }
 }
