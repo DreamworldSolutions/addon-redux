@@ -2,7 +2,7 @@
 
 Storybook Redux Addon aids in using redux backed components in your stories in [Storybook](https://storybook.js.org).
 
-Ideally stories are only needed for non-redux connected components, not containers.  However, when writing stories for components of a redux application, it is common for the components to have conatiners as children which causes problems.  This is where the Redux Addon helps out by providing a decorator and helpful panels to support container components.
+Ideally stories are only needed for non-redux connected components, not containers.  However, when writing stories for components of a redux application, it is common for the components to have containers as children which causes problems.  This is where the Redux Addon helps out by providing a decorator and helpful panels to support container components.
 
 ---
 

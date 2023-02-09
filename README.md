@@ -2,7 +2,7 @@
 
 `addon-redux` is a [Storybook](https://storybook.js.org) addon that helps when building stories using components that use redux state.
 
-Ideally stories are only needed for non-redux connected components, not containers.  However, when writing stories for components of a redux application, it is common for the components to have conatiners as children which causes problems.  This is where `addon-redux` helps out by providing a decorator and helpful panels to support container components.
+Ideally stories are only needed for non-redux connected components, not containers.  However, when writing stories for components of a redux application, it is common for the components to have containers as children which causes problems.  This is where `addon-redux` helps out by providing a decorator and helpful panels to support container components.
 
 
 This documentation is for version 2, [click here](docs/v1/README.md) for information on setting up version 1.
